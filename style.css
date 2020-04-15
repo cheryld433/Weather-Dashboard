@@ -1,0 +1,23 @@
+#header{
+    text-align: center;
+    background-color:#172650;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white
+}
+
+#searchBtn {
+    background-color: #172650;
+    color:white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-radius: 0;
+}
+
+.card-body{
+    background-color: #3d6488;
+    color: white;
+    border-radius: 5px;
+}
+.todayWeather {
+    border: 1px, solid, black;
+}
+
