@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,20 +17,21 @@
     <!--Main container-->
     <div class="container-fluid row "> 
         <!--div: input for searchBar, searchBtn, citySearch results-->
-        <div class="col-3 left_div justify-content-center pt-3 search">
-            <div class="input mb-4">
+        <div class="col-3 left_div justify-content-center pt-3 searchView">
+            <div class=" mb-4">
                 <h5 class="justify-content-center pt-2 pl-3">Search by city: </h5>
-                <form class="form-inline my-2 my-lg-0 mt-3 ml-3">
-                    <input class="form-control mr-sm-2 float-left" type="search" placeholder="Search" id= "searchBar" aria-label="Search">
-                    <button id="searchBtn" class="btn btn-outline-light my-2 my-sm-2" type="submit"><i class="fas fa-search"></i></button>
-                </form>
+                <div class="form-inline my-2 my-lg-0 mt-3 ml-3">
+                    <input class="form-control mr-sm-2 float-left" type="input" placeholder="Search" id= "searchBar" aria-label="Search">
+                    <button id="searchBtn" class="btn btn-outline-light my-2 my-sm-2" type="button"><i class="fa fa-search"></i></button>
+                </div>
             </div>
-            <h5 class="justify-content-center pt-3 pl-3">Previously searched cities: </h5>
-            <div class="container my-3 col-12" id="citySearch"></div>
+            <!--unordered list to store user's city choices.-->
+            <ul class="list-group" id="history">
+    
+            </ul>
         </div> 
         <!--div: for currentWeather, currentTemp, currentHumidity, currentWindSpeed, currentWind 
             and todayIcon-->
-
         <div class="col-9 pt-3">
             <div class="bg-light p-3">
                 <h2 class="justify-content-center text-dark" id="cityName"></h2>
@@ -44,11 +45,9 @@
                     </div>
                 </div> 
             </div> 
-        
-
+    
           <!--div: five day forcast: each card body to contain: date, temp, humidity, icon for each day. 
            need repeat 5 times-->
-
         <div class="fiveDayDiv bg-light p-3 m-3 col-12">
             <div class="bg-light">
                 <h5 class="text-dark">Five Day Weather Forecast</h5>
