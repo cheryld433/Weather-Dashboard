@@ -1,3 +1,17 @@
 .container {
     margin-top: auto;
+    background-color: #F9F5F3;
 }
+
+h1 {
+    background-color: #110a43;
+}
+
+
+#searchBtn {
+    background-color: #110a43;
+}
+
+
+
+
