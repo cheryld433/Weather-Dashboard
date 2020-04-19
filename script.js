@@ -88,23 +88,22 @@ var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?&appid=ecc0be5fd92
         url: queryURLforecast,
         method: 'GET'
     }).then(function (response) {
-        // Storing an array of results in the results variable
         var results = response.list;
-        //empty 5day div--------
+        //empty 5day div:
         $("#5dayForecast").empty();
-        //create HTML for 5day forcast................
+        //create HTML for 5day forcast: get from bootstrap
         for (var i = 0; i < results.length; i += 8) {
-            // Creating a div
+            // Creating a div: 
             var fiveDayForecastDiv = $("<div class='card shadow-lg text-white bg-primary mx-auto mb-10 p-2' style='width: 8.5rem; height: 11rem;'>");
             
-            //Storing the responses date temp and humidity.......
+            
             var date = results[i].dt_txt;
             var setDate = date.substr(0,10)
             var temp = results[i].main.temp;
             var hum = results[i].main.humidity;
    
-            //creating tags with the result items information.....
-            var h5date = $("<h5 class='card-title'>").text(setDate);
+            //creating tags 
+            var h6date = $("<h6 class='card-title'>").text(setDate);
             var pTemp = $("<p class='card-text'>").text("Temp: " + temp);;
             var pHum = $("<p class='card-text'>").text("Humidity " + hum);;
             var weather = results[i].weather[0].main
@@ -130,7 +129,7 @@ var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?&appid=ecc0be5fd92
                 iconImg.attr("style", "height: 30px; width: 30px");
             }
 
-            fiveDayForecastDiv.append(h5date);
+            fiveDayForecastDiv.append(h6date);
             fiveDayForecastDiv.append(iconImg);
             fiveDayForecastDiv.append(pTemp);
             fiveDayForecastDiv.append(pHum);
