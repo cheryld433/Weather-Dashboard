@@ -20,6 +20,7 @@ function searchCity(cityname) {
         console.log(response);
         console.log(queryURL);
 
+
         // If statement:
         if(lastSearch.indexOf(cityname) === -1){
             lastSearch.push(cityname);
@@ -139,11 +140,12 @@ var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?&appid=ecc0be5fd92
 }
 
 
-$("#select-city").on("click", function (event) {
+$("#searchBtn").on("click", function (event) {
+  event.preventDefault();
 
-    event.preventDefault();
     
     var cityInput = $("#city-input").val().trim();
+    console.log(cityInput);
     $("#city-input").val("")
   if(cityInput){
     searchCity(cityInput);
@@ -167,7 +169,7 @@ function loadPage () {
 
 
 $("#searchHistory").on('click', '.btn', function(event) {
-event.preventDefault();
+    event.preventDefault();
     console.log($(this).text());
     searchCity($(this).text());
 
